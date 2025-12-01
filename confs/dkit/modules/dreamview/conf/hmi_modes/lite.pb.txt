@@ -1,7 +1,7 @@
 cyber_modules {
-  key: "Vanjee Lidar"
+  key: "Lidar"
   value: {
-    dag_files: "/apollo/modules/drivers/lidar/vanjeelidar/dag/vanjeelidar.dag"
+    dag_files: "/apollo/modules/drivers/lidar/rslidar/dag/rslidar.dag"
   }
 }
 cyber_modules {
@@ -134,7 +134,7 @@ monitored_components {
   key: "Lidar"
   value: {
     channel {
-      name: "/apollo/sensor/vanjeelidar/up/PointCloud2"
+      name: "/apollo/sensor/rslidar/up/PointCloud2"
     }
   }
 }

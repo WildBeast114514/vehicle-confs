@@ -1,5 +1,5 @@
 # Topics
-pointcloud_topic: "/apollo/sensor/vanjeelidar/up/PointCloud2"               # Point cloud data
+pointcloud_topic: "/apollo/sensor/rslidar/up/PointCloud2"               # Point cloud data
 imu_topic: "/apollo/sensor/gnss/corrected_imu"                         # IMU data
 odom_topic: "/apollo/localization/pose"                   # IMU pre-preintegration odometry, same frequency as IMU
 gps_topic: "/apollo/sensor/gnss/best_pose"
