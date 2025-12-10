@@ -20,5 +20,3 @@
 --server_ports=8888
 
 --map_dir=/apollo/modules/map/data/demo
-
---map_dir=/apollo/modules/map/data/r1

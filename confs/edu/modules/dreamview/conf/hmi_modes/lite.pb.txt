@@ -24,6 +24,12 @@ cyber_modules {
   }
 }
 cyber_modules {
+  key: "Guardian"
+  value: {
+    dag_files: "/apollo/modules/guardian/dag/guardian.dag"
+  }
+}
+cyber_modules {
   key: "GPS"
   value: {
     dag_files: "/apollo/modules/drivers/gnss/dag/gnss.dag"
@@ -45,6 +51,7 @@ cyber_modules {
   key: "Lidar Perception"
   value: {
     dag_files: "/apollo/modules/perception/production/dag/dag_streaming_perception_lidar.dag"
+    dag_files: "/apollo/modules/perception/production/dag/dag_streaming_collision_guardian.dag"
   }
 }
 cyber_modules {
@@ -85,28 +92,6 @@ cyber_modules {
   }
 }
 monitored_components {
-  key: "Recorder"
-  value: {
-    process {
-      command_keywords: "cyber_recorder record"
-    }
-    resource {
-      disk_spaces {
-        # For logs.
-        path: "/apollo/data"
-        insufficient_space_warning: 8
-        insufficient_space_error: 2
-      }
-      disk_spaces {
-        # For records.
-        path: "/media/apollo/internal_nvme"
-        insufficient_space_warning: 128
-        insufficient_space_error: 32
-      }
-    }
-  }
-}
-monitored_components {
   key: "GNSS"
   value: {
     process {
@@ -125,14 +110,6 @@ monitored_components {
     }
     channel {
       name: "/apollo/localization/pose"
-    }
-  }
-}
-monitored_components {
-  key: "Lidar 16"
-  value: {
-    channel {
-      name: "/apollo/sensor/vanjeelidar/up/PointCloud2"
     }
   }
 }
