@@ -24,12 +24,6 @@ cyber_modules {
   }
 }
 cyber_modules {
-  key: "Guardian"
-  value: {
-    dag_files: "/apollo/modules/guardian/dag/guardian.dag"
-  }
-}
-cyber_modules {
   key: "GPS"
   value: {
     dag_files: "/apollo/modules/drivers/gnss/dag/gnss.dag"
