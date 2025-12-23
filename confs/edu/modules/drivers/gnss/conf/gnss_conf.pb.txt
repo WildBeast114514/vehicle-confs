@@ -14,8 +14,8 @@ rtk_from {
         port: 8002
         # mount_point: "RTCM32_GGB"
         mount_point: "AUTO"
-        user: "qxwran0026"
-        password: "709ce1d"
+        user: "qianxun1234"
+        password: "abc123"
         timeout_s: 5
     }
     push_location: true

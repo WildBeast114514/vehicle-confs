@@ -45,7 +45,6 @@ cyber_modules {
   key: "Lidar Perception"
   value: {
     dag_files: "/apollo/modules/perception/production/dag/dag_streaming_perception_lidar.dag"
-    dag_files: "/apollo/modules/perception/production/dag/dag_streaming_collision_guardian.dag"
   }
 }
 cyber_modules {

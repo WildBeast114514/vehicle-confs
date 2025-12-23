@@ -7,7 +7,7 @@ enable_input_timestamp_check: false
 max_localization_miss_num : 20
 max_planning_miss_num: 20
 max_acceleration_when_stopped: 0.01
-max_path_remain_when_stopped: 0.3
+max_path_remain_when_stopped: 0.05
 steer_angle_rate: 100
 enable_gain_scheduler: true
 set_steer_limit: true
@@ -38,14 +38,14 @@ lat_controller_conf {
   mass_rl: 520
   mass_rr: 520
   eps: 0.01
-  matrix_q: 0.05
-  matrix_q: 0.0
-  matrix_q: 1.0
-  matrix_q: 0.0
-  reverse_matrix_q: 0.05
-  reverse_matrix_q: 0.0
-  reverse_matrix_q: 1.0
-  reverse_matrix_q: 0.0
+  matrix_q: 0.3
+  matrix_q: 0.1
+  matrix_q: 0.5
+  matrix_q: 0.1
+  reverse_matrix_q: 0.3
+  reverse_matrix_q: 0.1
+  reverse_matrix_q: 0.5
+  reverse_matrix_q: 0.1
   cutoff_freq: 10
   mean_filter_window_size: 10
   max_iteration: 150
@@ -105,7 +105,7 @@ lat_controller_conf {
     innerstate_saturation_level: 3000
     alpha: 1.0
     beta: 1.0
-    tau: 0.0
+    tau: 0.01
   }
   steer_mrac_conf {
     mrac_model_order: 1
@@ -125,7 +125,7 @@ lon_controller_conf {
   ts: 0.01
   brake_minimum_action: 0.0
   throttle_minimum_action: 0.0
-  speed_controller_input_limit: 2.0
+  speed_controller_input_limit: 3.0
   station_error_limit: 2.0
   preview_window: 20.0
   standstill_acceleration: -0.3
@@ -133,38 +133,38 @@ lon_controller_conf {
   station_pid_conf {
     integrator_enable: false
     integrator_saturation_level: 0.3
-    kp: 0.2
-    ki: 0.0
-    kd: 0.0
-  }
-  low_speed_pid_conf {
-    integrator_enable: true
-    integrator_saturation_level: 0.3
-    kp: 2.0
+    kp: 0.6
     ki: 0.3
     kd: 0.0
   }
-  high_speed_pid_conf {
+  low_speed_pid_conf {
     integrator_enable: true
     integrator_saturation_level: 0.3
     kp: 1.0
     ki: 0.3
     kd: 0.0
   }
+  high_speed_pid_conf {
+    integrator_enable: true
+    integrator_saturation_level: 0.3
+    kp: 0.5
+    ki: 0.3
+    kd: 0.0
+  }
   switch_speed: 3.0
   switch_speed_window: 1.0
   reverse_station_pid_conf {
-    integrator_enable: true
-    integrator_saturation_level: 0.5
-    kp: 0.4
+    integrator_enable: false
+    integrator_saturation_level: 0.3
+    kp: 0.3
     ki: 0.1
     kd: 0.0
   }
   reverse_speed_pid_conf {
     integrator_enable: true
     integrator_saturation_level: 0.5
-    kp: 2.0
-    ki: 0.3
+    kp: 0.5
+    ki: 0.1
     kd: 0.0
   }
   reverse_station_leadlag_conf {

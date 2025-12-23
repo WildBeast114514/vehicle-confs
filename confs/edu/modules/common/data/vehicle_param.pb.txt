@@ -11,11 +11,10 @@ vehicle_param {
   length: 1.42   # 整车长度
   width: 0.86   # 整车宽度
   height: 1.14   # 整车高度
-  min_turn_radius: 1.2    # 车辆最小转弯半径
-  max_acceleration: 3.0    # 车辆最大加速度
-  max_deceleration: -7.34    # 车辆最大减速度
-  # max_steer_angle: 4.72984    # 车辆方向盘最大转角（弧度）
-  max_steer_angle: 5.392029    # 车辆方向盘最大转角（弧度）
+  min_turn_radius: 2.185    # 车辆最小转弯半径
+  max_acceleration: 1.0    # 车辆最大加速度
+  max_deceleration: -3.0    # 车辆最大减速度
+  max_steer_angle: 4.367543    # 车辆方向盘最大转角（弧度）
   max_steer_angle_rate: 0.6108    # 车辆方向盘最大转速率（弧度/秒）
   steer_ratio: 12.445    # 车辆方向盘到车前轮转角转换系数
   wheel_base: 0.8    # 车辆前后轴距离
